@@ -13,7 +13,7 @@ const Database = require('./database.js');
     console.error('⚠️ 数据库连接失败，将只保存到JSON文件:', error.message);
   }
   const browser = await puppeteer.launch({ 
-    headless: false,
+    headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   
